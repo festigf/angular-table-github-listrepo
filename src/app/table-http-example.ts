@@ -55,7 +55,12 @@ export class TableHttpExample implements AfterViewInit {
           this.isRateLimitReached = true;
           return observableOf([]);
         })
-      ).subscribe(data => this.data = data);
+      ).subscribe(data => {
+        this.data = data;
+        console.log(data);
+
+        }
+        );
   }
 }
 
